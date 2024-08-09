@@ -260,3 +260,17 @@ h1 {
     transform: translateY(0);
   }
 }
+
+
+.error {
+  background-color: pink;
+  width: 20rem;
+  margin: auto;
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+
+.error h2,
+.error p {
+  color: red
+}
