@@ -30,6 +30,7 @@ import RootLayout from './Pages/Root';
 import EventsRootLayout from './Pages/EventsRoot';
 import ErrorPage from './Pages/Error';
 import { action as manipulateEventAction } from './components/EventForm';
+import NewsletterPage, {action as newsletterAction} from './Pages/Newsletter';
 
 const router = createBrowserRouter([
   {
@@ -37,13 +38,15 @@ const router = createBrowserRouter([
     element: <RootLayout />,
     errorElement: <ErrorPage />,
     children: [
-      {index: true, element: <HomePage />},
-      { path: 'events', element: <EventsRootLayout />,
+      { index: true, element: <HomePage /> },
+      {
+        path: 'events',
+        element: <EventsRootLayout />,
         children: [
-          { 
-            path: '', 
+          {
+            index: true,
             element: <EventsPage />,
-            loader: eventsLoader
+            loader: eventsLoader,
           },
           {
             path: ':eventId',
@@ -53,19 +56,30 @@ const router = createBrowserRouter([
               {
                 index: true,
                 element: <EventDetailPage />,
-                action: deleteEventAction
+                action: deleteEventAction,
               },
-              {path: 'edit', element: <EditEventPage />, action: manipulateEventAction}
-            ]
-            
+              {
+                path: 'edit',
+                element: <EditEventPage />,
+                action: manipulateEventAction,
+              },
+            ],
           },
-          {path: 'new', element: <NewEventPage />, action: manipulateEventAction }
-        ]
-      }
-      
-    ]
-  }
-])
+          {
+            path: 'new',
+            element: <NewEventPage />,
+            action: manipulateEventAction,
+          },
+        ],
+      },
+      {
+        path: 'newsletter',
+        element: <NewsletterPage />,
+        action: newsletterAction,
+      },
+    ],
+  },
+]);
 
 
 function App() {
