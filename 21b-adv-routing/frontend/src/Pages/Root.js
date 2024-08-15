@@ -3,10 +3,16 @@ import MainNavigation from "../components/MainNavigation";
 
 
 function RootLayout() {
+    // const navigation = useNavigation();
+
     return(
         <>
             <MainNavigation/>
-            <Outlet />
+            <main>
+                {/* {navigation.state === 'loading' && <p>Loading...</p>} */}
+                <Outlet />
+            </main>
+            
         </>
     )
 }
