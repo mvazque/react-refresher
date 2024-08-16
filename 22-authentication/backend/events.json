@@ -1,12 +1,1 @@
-{
-  "events": [
-    {
-      "title": "A new event",
-      "image": "https://cdn.muenchen-p.de/fl_progressive,q_65/.imaging/stk/responsive/teaser300/dms/va-2016/muenchner-christkindlmarkt/christkindlmarkt-marienplat-logo-hp/document/christkindlmarkt-marienplat-logo-hp.jpg",
-      "date": "2022-10-01",
-      "description": "Some awesome event!",
-      "id": "2a42fcc4-ea21-4bdd-abf6-c40006dc66a9"
-    }
-  ],
-  "users": []
-}
+{"events":[{"title":"Test","image":"https://media.istockphoto.com/id/974238866/photo/audience-listens-to-the-lecturer-at-the-conference.jpg?s=612x612&w=0&k=20&c=p_BQCJWRQQtZYnQlOtZMzTjeB_csic8OofTCAKLwT0M=","date":"2024-08-16","description":"12341212","id":"f05ade1d-7ac3-4d17-954c-4ed3333b1685"}],"users":[{"email":"person@place.com","password":"$2a$12$pxjzNza5vSHcc.OlHLRXtuWNJDtKnwC0m.w1UszcgvuL5yycYhpyW","id":"307cec4b-3f07-4288-a547-631e4529fb18"}]}
