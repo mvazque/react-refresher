@@ -1,9 +1,22 @@
+import { createContext, useContext } from 'react';
 
-export default function AccordionItem({ children, className}) {
+const AccordionItemContext = createContext();
+
+export function useAccordionItemContext() {
+    const ctx = useContext(AccordionItemContext);
+
+    if(!ctx) {
+        throw new Error('AccordionItem-related components must be wrapped by <Accordion.Item> component.');
+    }
+    return ctx;
+}
+
+export default function AccordionItem({ id, children, className}) {
     
     return (
-        <li className={className}>
-            {children}
-        </li>
+        <AccordionItemContext.Provider value={id}>
+            <li className={className}>{children}</li>
+        </AccordionItemContext.Provider>
+        
     )
 }

@@ -9,13 +9,12 @@ function App() {
         <Accordion className="accordion">
           <Accordion.Item 
             className="accordion-item" 
+            id="experience"
           >
             <Accordion.Title 
-              id="experience"
               className="accordion-item-title"
             >We have 20 years of experience</Accordion.Title>
             <Accordion.Content 
-              id="experience"
               className="accordion-item-content"
             >
               <article>
@@ -29,14 +28,13 @@ function App() {
           </Accordion.Item >
 
           <Accordion.Item  
+            id="local-guides"
             className="accordion-item" 
           >
             <Accordion.Title 
-              id="local-guides"
               className="accordion-item-title"
             >We are working with local guides</Accordion.Title>
             <Accordion.Content 
-              id="local-guides"
               className="accordion-item-content"
             >
               <article>
