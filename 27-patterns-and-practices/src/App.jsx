@@ -1,5 +1,4 @@
 import Accordion from "../components/Accordion/Accordion";
-import AccordionItem from "../components/Accordion/AccordionItem";
 
 function App() {
   return (
@@ -8,32 +7,46 @@ function App() {
         <h2>Why work with us?</h2>
 
         <Accordion className="accordion">
-          <AccordionItem 
+          <Accordion.Item 
             className="accordion-item" 
-            title="We have 20 years of experience"
-            id="experience"
           >
-            <article>
-              <p>You can&apos;t go wrong with us.</p>
-              <p>
-                We are in the business of planning highly 
-                individualized vacation trips for more than 20 years
-              </p>
-            </article>
-          </AccordionItem>
+            <Accordion.Title 
+              id="experience"
+              className="accordion-item-title"
+            >We have 20 years of experience</Accordion.Title>
+            <Accordion.Content 
+              id="experience"
+              className="accordion-item-content"
+            >
+              <article>
+                <p>You can&apos;t go wrong with us.</p>
+                <p>
+                  We are in the business of planning highly 
+                  individualized vacation trips for more than 20 years
+                </p>
+              </article>
+            </Accordion.Content>
+          </Accordion.Item >
 
-          <AccordionItem 
+          <Accordion.Item  
             className="accordion-item" 
-            title="We are working with local guides"
-            id="local-guides"
           >
-            <article>
-              <p>We are not doing this alone from our office.</p>
-              <p>
-                Instead we work with local guides to ensure a safe and pleasant vacation.
-              </p>
-            </article>
-          </AccordionItem>
+            <Accordion.Title 
+              id="local-guides"
+              className="accordion-item-title"
+            >We are working with local guides</Accordion.Title>
+            <Accordion.Content 
+              id="local-guides"
+              className="accordion-item-content"
+            >
+              <article>
+                <p>We are not doing this alone from our office.</p>
+                <p>
+                  Instead we work with local guides to ensure a safe and pleasant vacation.
+                </p>
+              </article>
+            </Accordion.Content>
+          </Accordion.Item >
         </Accordion>
       </section>
     </main>
